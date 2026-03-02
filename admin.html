@@ -122,7 +122,7 @@
   <div class="header-right">
     <div class="share-link" onclick="copyPublicLink()">
       <span>Link público:</span>
-      <code id="public-link-text">catalogo.html</code>
+      <code id="public-link-text">camisas-do-santa.html</code>
       <button class="copy-btn">Copiar</button>
     </div>
     <button class="btn-add" onclick="openModal()">+ Adicionar</button>
@@ -344,7 +344,9 @@
   }
 
   function copyPublicLink() {
-    navigator.clipboard.writeText('catalogo.html').then(() => showToast('Link copiado!'));
+    // se quiser trocar depois, é só alterar o texto aqui
+    const link = 'camisas-do-santa.html';
+    navigator.clipboard.writeText(link).then(() => showToast('Link copiado!'));
   }
 
   document.getElementById('overlay').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
