@@ -146,7 +146,7 @@
   .card-name {
     font-weight: 600;
     font-size: 1rem;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     line-height: 1.3;
   }
 
@@ -155,6 +155,22 @@
     font-size: 1.5rem;
     color: var(--red);
     letter-spacing: 1px;
+  }
+
+  .card-price.combinado {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--red);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-top: 6px;
+    min-height: 1.2em;
   }
 </style>
 </head>
@@ -182,7 +198,6 @@
 </main>
 
 <script>
-  // Mesmo backend do admin
   const SUPABASE_URL = 'https://wmbsocblslwsaofyrilk.supabase.co';
   const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndtYnNvY2Jsc2x3c2FvZnlyaWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NzczMjgsImV4cCI6MjA4ODA1MzMyOH0.xXdJ7pRKKFNtfHLgbMcYJH_kKjnUirC6KFP2XOh0M_w';
 
@@ -222,7 +237,16 @@
       return;
     }
 
-    grid.innerHTML = products.map(p => `
+    grid.innerHTML = products.map(p => {
+      const hasPrice = p.price !== null && p.price !== undefined && p.price !== '';
+      const priceHtml = hasPrice
+        ? `<div class="card-price">${formatPrice(p.price)}</div>`
+        : `<div class="card-price combinado">Preço à combinar</div>`;
+      const descriptionHtml = p.description
+        ? `<div class="card-description">${p.description}</div>`
+        : `<div class="card-description"></div>`;
+
+      return `
       <div class="card">
         <div class="card-img">
           ${
@@ -240,10 +264,11 @@
         </div>
         <div class="card-body">
           <div class="card-name">${p.name}</div>
-          <div class="card-price">${formatPrice(p.price)}</div>
+          ${priceHtml}
+          ${descriptionHtml}
         </div>
-      </div>
-    `).join('');
+      </div>`;
+    }).join('');
   }
 
   async function loadProducts() {
@@ -251,6 +276,7 @@
       const res = await api('products?order=created_at.desc');
       if (!res.ok) throw new Error('Erro ao buscar produtos');
       products = await res.json();
+      render();
     } catch (err) {
       console.error(err);
       const grid = document.getElementById('grid');
@@ -260,9 +286,7 @@
           <small>Tente novamente mais tarde.</small>
         </div>`;
       document.getElementById('count').textContent = '—';
-      return;
     }
-    render();
   }
 
   document.addEventListener('DOMContentLoaded', loadProducts);
