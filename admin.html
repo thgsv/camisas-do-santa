@@ -29,7 +29,12 @@
     z-index: 100;
     border-bottom: 3px solid var(--red);
   }
-  header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: #fff; letter-spacing: 2px; }
+  header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    letter-spacing: 2px;
+  }
   header h1 span { color: var(--red); }
   .header-right { display: flex; align-items: center; gap: 16px; }
   .share-link {
@@ -44,55 +49,235 @@
     transition: border-color 0.2s;
   }
   .share-link:hover { border-color: var(--red); }
-  .share-link span { font-size: 0.78rem; color: var(--gray); letter-spacing: 0.5px; text-transform: uppercase; }
-  .share-link code { font-size: 0.78rem; color: #aaa; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .copy-btn { background: var(--red); border: none; color: #fff; padding: 4px 10px; font-size: 0.7rem; font-weight: 600; cursor: pointer; border-radius: 2px; font-family: 'DM Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
-  .btn-add { background: var(--red); color: #fff; border: none; padding: 10px 24px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; cursor: pointer; text-transform: uppercase; transition: background 0.2s; border-radius: 2px; }
+  .share-link span {
+    font-size: 0.78rem;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .share-link code {
+    font-size: 0.78rem;
+    color: #aaa;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .copy-btn {
+    background: var(--red);
+    border: none;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .btn-add {
+    background: var(--red);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    border-radius: 2px;
+  }
   .btn-add:hover { background: var(--dark-red); }
 
   main { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
-  .catalog-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
-  .catalog-meta h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 2px; color: var(--gray); }
+  .catalog-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  .catalog-meta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--gray);
+  }
   .product-count { font-size: 0.85rem; color: var(--gray); }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+  }
 
-  .empty { grid-column: 1/-1; text-align: center; padding: 80px 20px; color: var(--gray); }
+  .empty {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--gray);
+  }
   .empty p { font-size: 1.1rem; margin-bottom: 8px; margin-top: 16px; }
   .empty small { font-size: 0.85rem; }
 
-  .loading { grid-column: 1/-1; text-align: center; padding: 80px 20px; color: var(--gray); font-size: 0.9rem; }
+  .loading {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
 
-  .card { background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.14); }
-  .card-img { width: 100%; aspect-ratio: 1/1; overflow: hidden; background: var(--light-gray); display: flex; align-items: center; justify-content: center; }
-  .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .no-img-placeholder { display: flex; flex-direction: column; align-items: center; gap: 8px; color: #ccc; font-size: 0.75rem; }
+  .card {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+  }
+  .card-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .no-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    font-size: 0.75rem;
+  }
   .card-body { padding: 16px; }
-  .card-name { font-weight: 600; font-size: 1rem; margin-bottom: 4px; line-height: 1.3; }
-  .card-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--red); letter-spacing: 1px; }
-  .card-price.combinado { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--red); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-  .card-description { font-size: 0.85rem; color: var(--gray); margin-top: 6px; min-height: 1.2em; }
+  .card-name {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .card-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--red);
+    letter-spacing: 1px;
+  }
+  .card-price.combinado {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--red);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .card-description {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-top: 6px;
+    min-height: 1.2em;
+  }
 
-  .card-actions { display: flex; border-top: 1px solid var(--light-gray); }
-  .card-actions button { flex: 1; background: none; border: none; padding: 10px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; transition: background 0.15s; }
+  .card-actions {
+    display: flex;
+    border-top: 1px solid var(--light-gray);
+  }
+  .card-actions button {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background 0.15s;
+  }
   .btn-edit { color: var(--black); }
   .btn-edit:hover { background: var(--light-gray); }
-  .btn-delete { color: var(--red); border-left: 1px solid var(--light-gray) !important; }
+  .btn-delete {
+    color: var(--red);
+    border-left: 1px solid var(--light-gray) !important;
+  }
   .btn-delete:hover { background: #FFF0F2; }
 
   /* MODAL */
-  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
   .overlay.open { display: flex; }
-  .modal { background: #fff; border-radius: 6px; width: 100%; max-width: 460px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.25); animation: slideUp 0.25s ease; }
-  @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-  .modal-header { background: var(--black); padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; }
-  .modal-header h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #fff; letter-spacing: 2px; }
-  .btn-close { background: none; border: none; color: var(--gray); cursor: pointer; font-size: 1.4rem; line-height: 1; transition: color 0.15s; }
+
+  .modal {
+    background: #fff;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 460px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    animation: slideUp 0.25s ease;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .modal-header {
+    background: var(--black);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .modal-header h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  .btn-close {
+    background: none;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: color 0.15s;
+  }
   .btn-close:hover { color: #fff; }
+
   .modal-body { padding: 28px 24px; }
   .field { margin-bottom: 20px; }
-  .field label { display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gray); margin-bottom: 6px; }
+  .field label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 6px;
+  }
   .field input[type="text"],
   .field input[type="number"],
   .field textarea {
@@ -106,9 +291,14 @@
     transition: border-color 0.15s;
     outline: none;
   }
-  .field textarea { resize: vertical; min-height: 70px; }
+  .field textarea {
+    resize: vertical;
+    min-height: 70px;
+  }
   .field input:focus,
-  .field textarea:focus { border-color: var(--red); }
+  .field textarea:focus {
+    border-color: var(--red);
+  }
   .field small {
     display: block;
     margin-top: 4px;
@@ -116,34 +306,138 @@
     color: var(--gray);
   }
 
-  .img-upload-area { border: 2px dashed var(--light-gray); border-radius: 3px; cursor: pointer; transition: border-color 0.15s, background 0.15s; overflow: hidden; position: relative; }
-  .img-upload-area:hover { border-color: var(--red); background: #FFF8F9; }
-  .img-upload-area input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
-  .img-placeholder { padding: 28px; text-align: center; color: var(--gray); }
-  .img-placeholder span { font-size: 0.85rem; display: block; margin-top: 8px; }
-  .img-preview { display: none; width: 100%; height: 180px; object-fit: cover; }
+  .img-upload-area {
+    border: 2px dashed var(--light-gray);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    overflow: hidden;
+    position: relative;
+  }
+  .img-upload-area:hover {
+    border-color: var(--red);
+    background: #FFF8F9;
+  }
+  .img-upload-area input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  .img-placeholder {
+    padding: 28px;
+    text-align: center;
+    color: var(--gray);
+  }
+  .img-placeholder span {
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 8px;
+  }
+  .img-preview {
+    display: none;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
   .img-preview.visible { display: block; }
 
-  .modal-footer { padding: 16px 24px; background: var(--off-white); display: flex; gap: 12px; justify-content: flex-end; }
-  .btn-cancel { background: none; border: 2px solid var(--light-gray); padding: 10px 22px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; border-radius: 2px; color: var(--black); transition: border-color 0.15s; }
+  .modal-footer {
+    padding: 16px 24px;
+    background: var(--off-white);
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+  .btn-cancel {
+    background: none;
+    border: 2px solid var(--light-gray);
+    padding: 10px 22px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    color: var(--black);
+    transition: border-color 0.15s;
+  }
   .btn-cancel:hover { border-color: var(--gray); }
-  .btn-save { background: var(--red); border: none; padding: 10px 28px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600; color: #fff; cursor: pointer; border-radius: 2px; letter-spacing: 0.5px; transition: background 0.15s; }
+  .btn-save {
+    background: var(--red);
+    border: none;
+    padding: 10px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+    transition: background 0.15s;
+  }
   .btn-save:hover { background: var(--dark-red); }
-  .btn-save:disabled { background: #ccc; cursor: not-allowed; }
+  .btn-save:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
 
-  .confirm-modal { background: #fff; border-radius: 6px; width: 100%; max-width: 360px; padding: 32px 28px; text-align: center; animation: slideUp 0.2s ease; }
-  .confirm-modal h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 10px; }
-  .confirm-modal p { color: var(--gray); font-size: 0.9rem; margin-bottom: 24px; }
-  .confirm-btns { display: flex; gap: 12px; justify-content: center; }
+  .confirm-modal {
+    background: #fff;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 360px;
+    padding: 32px 28px;
+    text-align: center;
+    animation: slideUp 0.2s ease;
+  }
+  .confirm-modal h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .confirm-modal p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  .confirm-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
 
-  .toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); background: var(--black); color: #fff; padding: 12px 24px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; z-index: 999; opacity: 0; transition: opacity 0.3s; pointer-events: none; border-left: 3px solid var(--red); }
+  .toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--black);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    border-left: 3px solid var(--red);
+  }
   .toast.show { opacity: 1; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Camisas <span>do Santa</span> <span style="font-size:1rem;color:#555;font-family:'DM Sans',sans-serif;font-weight:400;letter-spacing:0;margin-left:8px">— Admin</span></h1>
+  <h1>
+    Camisas <span>do Santa</span>
+    <span style="font-size:1rem;color:#555;font-family:'DM Sans',sans-serif;font-weight:400;letter-spacing:0;margin-left:8px">
+      — Admin
+    </span>
+  </h1>
   <div class="header-right">
     <div class="share-link" onclick="copyPublicLink()">
       <span>Link público:</span>
@@ -190,10 +484,14 @@
 
       <div class="field">
         <label>Foto do Produto</label>
-        <div class="img-upload-area" onclick="document.getElementById('inp-file').click()">
-          <input type="file" id="inp-file" accept="image/*" onchange="handleFile(event)">
+        <div class="img-upload-area">
+          <input type="file" id="inp-file" accept="image/*">
           <div class="img-placeholder" id="img-placeholder">
-            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
             <span>Clique para selecionar uma imagem</span>
           </div>
           <img class="img-preview" id="img-preview" alt="Preview">
@@ -222,7 +520,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-  // Supabase (igual você já estava usando)
+  // Supabase
   const SUPABASE_URL = 'https://wmbsocblslwsaofyrilk.supabase.co';
   const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndtYnNvY2Jsc2x3c2FvZnlyaWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NzczMjgsImV4cCI6MjA4ODA1MzMyOH0.xXdJ7pRKKFNtfHLgbMcYJH_kKjnUirC6KFP2XOh0M_w';
 
@@ -249,7 +547,10 @@
   }
 
   function formatPrice(v) {
-    return Number(v).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    return Number(v).toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    });
   }
 
   function render() {
@@ -258,11 +559,16 @@
     count.textContent = products.length + ' produto' + (products.length !== 1 ? 's' : '');
 
     if (products.length === 0) {
-      grid.innerHTML = `<div class="empty">
-        <svg width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        <p>Nenhum produto cadastrado ainda.</p>
-        <small>Clique em "+ Adicionar" para começar.</small>
-      </div>`;
+      grid.innerHTML = `
+        <div class="empty">
+          <svg width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <p>Nenhum produto cadastrado ainda.</p>
+          <small>Clique em "+ Adicionar" para começar.</small>
+        </div>`;
       return;
     }
 
@@ -307,6 +613,7 @@
   function openModal(id = null) {
     editingId = id;
     currentImage = null;
+
     document.getElementById('inp-name').value = '';
     document.getElementById('inp-description').value = '';
     document.getElementById('inp-price').value = '';
@@ -319,16 +626,19 @@
       document.getElementById('modal-title').textContent = 'Editar Produto';
       document.getElementById('inp-name').value = p.name || '';
       document.getElementById('inp-description').value = p.description || '';
-      document.getElementById('inp-price').value = (p.price !== null && p.price !== undefined && p.price !== '') ? p.price : '';
+      document.getElementById('inp-price').value =
+        (p.price !== null && p.price !== undefined && p.price !== '') ? p.price : '';
       if (p.img) {
         currentImage = p.img;
-        document.getElementById('img-preview').src = p.img;
-        document.getElementById('img-preview').classList.add('visible');
+        const preview = document.getElementById('img-preview');
+        preview.src = p.img;
+        preview.classList.add('visible');
         document.getElementById('img-placeholder').style.display = 'none';
       }
     } else {
       document.getElementById('modal-title').textContent = 'Novo Produto';
     }
+
     document.getElementById('overlay').classList.add('open');
   }
 
@@ -339,16 +649,22 @@
   }
 
   function handleFile(e) {
-    const file = e.target.files[0];
+    const input = e.target;
+    const file = input.files[0];
     if (!file) return;
+
     const reader = new FileReader();
     reader.onload = ev => {
       currentImage = ev.target.result;
-      document.getElementById('img-preview').src = currentImage;
-      document.getElementById('img-preview').classList.add('visible');
+      const preview = document.getElementById('img-preview');
+      preview.src = currentImage;
+      preview.classList.add('visible');
       document.getElementById('img-placeholder').style.display = 'none';
     };
     reader.readAsDataURL(file);
+
+    // permite selecionar a mesma imagem de novo no futuro
+    input.value = '';
   }
 
   async function saveProduct() {
@@ -378,7 +694,10 @@
       if (editingId) {
         const body = { name, description, price };
         if (currentImage !== null) body.img = currentImage;
-        await api(`products?id=eq.${editingId}`, { method: 'PATCH', body: JSON.stringify(body) });
+        await api(`products?id=eq.${editingId}`, {
+          method: 'PATCH',
+          body: JSON.stringify(body)
+        });
         showToast('Produto atualizado!');
       } else {
         await api('products', {
@@ -398,7 +717,9 @@
     }
   }
 
-  function editProduct(id) { openModal(id); }
+  function editProduct(id) {
+    openModal(id);
+  }
 
   function askDelete(id) {
     deletingId = id;
@@ -441,6 +762,9 @@
   document.getElementById('overlay-confirm').addEventListener('click', e => {
     if (e.target === e.currentTarget) closeConfirm();
   });
+
+  // listener do arquivo de imagem (corrige o problema de ter que escolher duas vezes)
+  document.getElementById('inp-file').addEventListener('change', handleFile);
 
   loadProducts();
 </script>
